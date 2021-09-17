@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <PageTest />
+    <SyncPageTest />
   </div>
 </template>
 
 <script>
-import PageTest from './pages/pageTest'
+import SyncPageTest from './pages/syncPageTest'
 
 export default {
   name: 'App',
   components: {
-    PageTest
+    SyncPageTest
   }
 }
 </script>
