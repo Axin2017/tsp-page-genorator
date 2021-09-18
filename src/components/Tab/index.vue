@@ -1,5 +1,5 @@
 <template>
-  <el-tabs :value="tab" type="card" @tab-click="handleTabClick">
+  <el-tabs :value="tab" type="card" @tab-click="handleTabClick" class="tabs-box">
     <el-tab-pane v-for="item in tabConfig" :name="item.label" :tab="item.value" :key="item.value">
       <span slot="label">{{ item.label }}</span>
     </el-tab-pane>
@@ -19,4 +19,7 @@ export default {
 </script>
 
 <style>
+.tabs-box {
+  margin-top: 20px;
+}
 </style>

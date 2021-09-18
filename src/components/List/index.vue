@@ -24,6 +24,7 @@
       </el-table-column>
     </el-table>
     <el-pagination
+      class="pagination-box"
       @current-change="handlePageChange"
       :current-page="pagination.currentPage"
       :page-size="pagination.pageSize"
@@ -66,4 +67,14 @@ export default {
 </script>
 
 <style>
+.pagination-box {
+  position: sticky;
+  bottom: 0;
+  margin-right: 80px;
+  height: 45px;
+  padding: 10px 0 0;
+  line-height: 45px;
+  text-align: right;
+  background: #fff;
+}
 </style>
