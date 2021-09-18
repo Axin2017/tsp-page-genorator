@@ -5,7 +5,7 @@ import CheckBox from '@/components/Filters/components/Checkbox';
 const filterItemConfigs = [
   {
     label: '商品编号',
-    span: 12,
+    span: 8,
     type: Input,
     dataKey: 'input',
     elementProps: {
@@ -14,7 +14,7 @@ const filterItemConfigs = [
   },
   {
     label: '是否超过24小时未处理',
-    span: 12,
+    span: 8,
     type: CheckBox,
     dataKey: 'over24',
   },
