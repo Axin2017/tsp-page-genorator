@@ -20,8 +20,8 @@ export default {
       id: 'sex',
       label: '性别',
       dataIndex: 'sex',
-      render: (scope) => {
-        return scope.row.sex === 1 ? '男' : '女'
+      render: (row) => {
+        return row.sex === 1 ? '男' : '女'
       }
     }
   ]

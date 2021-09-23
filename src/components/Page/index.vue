@@ -5,6 +5,9 @@
       :filterConfig="filterConfig"
       @filterChange="handleFilterChange"
     />
+    <div class="filter-op">
+      <slot name="opration"></slot>
+    </div>
     <Tab
       :tab="tab"
       :tabConfig="tabConfig"
@@ -50,5 +53,8 @@ export default {
 </script>
 
 <style>
+.filter-op {
+  text-align: right;
+}
 
 </style>

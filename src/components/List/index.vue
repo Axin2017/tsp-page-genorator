@@ -19,7 +19,7 @@
         v-bind="column.props || {}"
       >
         <template v-slot="scope" v-if="column.render">
-          {{ renderCell(column, scope) }}
+          <TableCell :render="column.render" :row="scope.row" />
         </template>
       </el-table-column>
     </el-table>
@@ -37,8 +37,10 @@
 </template>
 
 <script>
+import TableCell from './TableCell';
 export default {
   name: "List",
+  components: { TableCell },
   props: ["tableData", "total", "tableConfig", "pagination"],
   mounted() {
   },
@@ -54,13 +56,6 @@ export default {
     },
     handlePageSizeChange(size) {
       this.$emit("tableChange", "size", size);
-    },
-    renderCell(column, scope) {
-      if (column.render) {
-        return column.render(scope);
-      } else {
-        return scope.row[column.dataIndex];
-      }
     },
   },
 };
